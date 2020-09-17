@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-/*
-*Print text as written
-*/
+/* Print text as written */
 
 int main (void)
 {
