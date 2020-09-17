@@ -6,10 +6,10 @@
 #include <stdio.h>
 int main(void)
 {
-printf("%c\n" Size of a char);
-printf("%d\n" Size of an int);
-printf("%ld\n" Size of a long int);
-printf("%llu\n" Size of a long long int);
-printf("%f\n" Size of a float);
+printf("%c\n", sizeof(char));
+printf("%d\n", sizeof(int));
+printf("%ld\n", sizeof(long int));
+printf("%llu\n", sizeof(long long int));
+printf("%f\n", sizeof(float));
 return (0);
 }
