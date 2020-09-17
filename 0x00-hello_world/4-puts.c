@@ -1,11 +1,10 @@
-#include <stdio.h>
-
 /**
  * main- void
  * Description: Prints sentence
- * Return: 0 in success or other number in failure
+ * Return: 0
  */
 
+#include <stdio.h>
 int main(void)
 {
         puts("\"Programming is like building a multilingual puzzle");
