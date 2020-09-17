@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main- entry point
+ * main- void
  * Description: Prints sentence
  * Return: 0 in success or other number in failure
  */
