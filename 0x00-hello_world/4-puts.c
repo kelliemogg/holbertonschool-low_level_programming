@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-/* Print text as written */
+/*
+ * main- entry point
+ * Return: 0 in success or other number in failure
+ */
 
-int main (void)
+int main(void)
 {
         puts("\"Programming is like building a multilingual puzzle");
         return (0);
