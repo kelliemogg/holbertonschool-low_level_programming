@@ -1,0 +1,1 @@
+Today, we are starting to get know Betty. 
