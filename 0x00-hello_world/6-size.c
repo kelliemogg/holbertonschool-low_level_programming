@@ -12,11 +12,11 @@ long int c;
 long long int d;
 float e;
 
-a = 1;
-b = 4;
-c = 4;
-d = 8;
-e = 4;
+a = 1 byte(s);
+b = 4 byte(s);
+c = 8 byte(s);
+d = 8 byte(s);
+e = 4 byte(s);
 
 printf("Size of a char: %c\n", a);
 printf("Size of an int: %d\n", b);
