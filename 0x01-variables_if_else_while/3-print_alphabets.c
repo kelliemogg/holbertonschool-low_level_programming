@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-*Main- void
-*Description:alphabet
-*Return: 0
+* Main- void
+* Description:alphabet
+* Return: 0
 */
 
 int main(void)
