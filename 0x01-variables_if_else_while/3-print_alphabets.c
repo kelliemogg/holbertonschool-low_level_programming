@@ -2,7 +2,7 @@
 
 /**
 * Main- void
-* Description:alphabet
+* Description: alphabet
 * Return: 0
 */
 
