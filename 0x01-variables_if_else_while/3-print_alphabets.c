@@ -12,14 +12,14 @@ int main(void)
 char n = 'a';
 char m = 'A';
 
-for (n = 'a'; n <= 'z'; n++)
-{
+for (; n <= 'z'; n++)
+
 putchar(n);
-}
-for (m = 'A'; m <= 'Z'; m++)
-{
+
+for (; m <= 'Z'; m++)
+
 putchar(m);
-}
 putchar('\n');
+
 return (0);
 }
