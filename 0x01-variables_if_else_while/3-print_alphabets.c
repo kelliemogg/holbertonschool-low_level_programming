@@ -1,13 +1,11 @@
-#include <stdio.h>
-
 /**
-* Main- void
-* Description: alphabet
+* main- void
+* description: alphabet
 * Return: 0
 */
 
+#include <stdio.h>
 int main(void)
-
 {
 char n = 'a';
 char m = 'A';
