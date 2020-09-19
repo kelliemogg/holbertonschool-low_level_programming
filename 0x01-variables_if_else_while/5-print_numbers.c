@@ -1,9 +1,9 @@
 #include<stdio.h>
-/**
-* main- void                            
-* description: base
-* Return: 0
-**/
+/*
+ * main- void                            
+ * description: base
+ * Return: 0
+ */
 
 int main(void)
 {
