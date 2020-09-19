@@ -7,9 +7,9 @@
 #include <stdio.h>
 int main(void)
 {
-char a;
+char a = 'a';
 
-for (a = 'a'; a <= 'z'; a++) 
+for (; a <= 'z'; a++) 
 {
 if (a != 'e' && a != 'q')
 {
