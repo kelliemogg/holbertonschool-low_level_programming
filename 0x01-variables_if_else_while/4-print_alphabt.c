@@ -1,5 +1,5 @@
 /**
- main- void
+* main- void
 * description: alphabet soup
 * Return: 0
 **/
