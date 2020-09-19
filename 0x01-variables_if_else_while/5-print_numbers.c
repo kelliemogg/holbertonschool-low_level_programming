@@ -1,10 +1,10 @@
-#include<stdio.h>
 /**
 * main- void                            
 * description: base
 * Return: 0
 **/
 
+#include<stdio.h>
 int main(void)
 {
   int n;
