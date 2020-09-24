@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * int add - add two integers
+ * add - add two integers
  * description: this adds two integers
  * @a: integer one
  * @b: integer two
