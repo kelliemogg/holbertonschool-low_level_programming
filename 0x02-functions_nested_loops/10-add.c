@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- * add - add two integers
- * description: this adds two integers
+ * add - adds
  * @a: integer one
  * @b: integer two
- * Returns: result
+ * description: adds two integers
+ * Return: int a + int b
  */
 
 int add(int a, int b)
