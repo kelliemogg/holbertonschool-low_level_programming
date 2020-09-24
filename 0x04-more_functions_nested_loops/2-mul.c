@@ -1,7 +1,6 @@
 #include "holberton.h"
-
 /**
- * int mul - multiplies
+ * mul - multiplies
  * @a: first
  * @b: second
  * description: multiplies two integers
