@@ -1,13 +1,13 @@
 #include "holberton.h"
 /**
-* main- int
+* _islower - alksdfj
 * description: lowercase or not
 * Return: 0, 1
 */
 
 int _islower(int c)
 {
-if ('a' <= c <= 'z')
+if (('a' <= c) && (c <= 'z'))
 {
 return(1);
 }
