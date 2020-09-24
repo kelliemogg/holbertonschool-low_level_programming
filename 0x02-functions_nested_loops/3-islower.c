@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
 * _islower - alksdfj
+* @c: a variable
 * description: lowercase or not
 * Return: 0, 1
 */
