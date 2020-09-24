@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
-* void jack_bauer - void
+* jack_bauer - time
 * description: soundtrack
 */
 
 void jack_bauer(void)
 {
-int h, m; 
+int h, m;
 {
 for (h = 0; h <= 23; h++)
 {
