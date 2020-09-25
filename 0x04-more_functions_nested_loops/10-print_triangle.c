@@ -1,6 +1,12 @@
-#include<stdio.h>
+#include "holberton.h"
 
-int main(void)
+/**
+ * print_triangle - print
+ * description: print a triangle
+ * Return: 0
+ */
+
+void print_triangle(int size);
 
 {
 	return (0);
