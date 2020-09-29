@@ -1,6 +1,13 @@
 #include "holberton.h"
 
-int main(void)
+/**
+ * reset_to_98 - changing stuff
+ * description: reassign a value
+ * @n: value
+ * Return: Always 0.
+ */
+
+void reset_to_98(int *n)
 {
-        return(0);
+	*n = 98;
 }
