@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * rev_string - reverse string
+ * puts2 - prints every other
  * description: reverse the string
- * @s: variable
+ * @str: variable
  * Return: 0
  */
 
-void rev_string(char *s)
+void puts2(char *str)
 {
 	int x;
 
