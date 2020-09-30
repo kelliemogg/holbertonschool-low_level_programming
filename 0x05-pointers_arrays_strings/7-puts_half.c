@@ -1,15 +1,37 @@
 #include "holberton.h"
 
 /**
- * puts2 - put it down
+ * puts_half - put it down
  * description: lol at the presidential debate
  * @str: stringgg
  * Return: 0
  */
 
-void rev_string(char *s)
+void puts_half(char *str)
 {
-	int x;
+	int len = 0, half;
 
-	return (0);
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	if (len % 2 == 0)
+	{
+		while (half <= len)
+		{
+			half = len / 2;
+			_putchar(str[half]);
+			half++;
+		}
+	}
+	else
+	{
+		half = (len - 1) / 2;
+		while (half <= len)
+		{
+			_putchar(str[half]);
+			half++;
+		}
+	}
+	_putchar('\n');
 }
