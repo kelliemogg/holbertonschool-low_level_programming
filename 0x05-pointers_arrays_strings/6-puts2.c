@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * puts2 - put it down
- * description: lol at the presidential debate
- * @str: stringgg
+ * rev_string - reverse string
+ * description: reverse the string
+ * @s: variable
  * Return: 0
  */
 
