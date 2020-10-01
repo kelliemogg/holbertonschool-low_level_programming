@@ -10,7 +10,9 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int x;
+	char i, n;
 
-	return (0);
+
+	}
+	return (dest);
 }
