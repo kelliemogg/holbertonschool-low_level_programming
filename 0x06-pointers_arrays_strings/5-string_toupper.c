@@ -9,7 +9,14 @@
 
 char *string_toupper(char *)
 {
-	int x;
+        int y;
+        int z = (_strlen(a) - 1);
 
-	return (0);
+        for (y = 0, n = z; y < n; y++, n--)
+        {
+                int z = a[y];
+
+                a[y] = a[n];
+                a[n] = z;
+        }
 }
