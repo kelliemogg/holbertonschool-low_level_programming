@@ -7,7 +7,7 @@
  * Return: count
  */
 
-int _strlen(char *a)
+int _strlen(int *a)
 {
 	int count = 0;
 
@@ -28,15 +28,14 @@ int _strlen(char *a)
 
 void reverse_array(int *a, int n)
 {
-	int x;
 	int y;
 	int z = (_strlen(a) - 1);
 
-	for (y = 0; x = z; y < x; y++, x--)
+	for (y = 0, n = z; y < n; y++, n--)
 	{
 		int z = a[y];
 
-		a[y] = a[x];
-		a[x] = z;
+		a[y] = a[n];
+		a[n] = z;
 	}
 }
