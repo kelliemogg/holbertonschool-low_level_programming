@@ -29,13 +29,14 @@ int _strlen(int *a)
 void reverse_array(int *a, int n)
 {
 	int y;
-	int z = (_strlen(a) - 1);
 
-	for (y = 0, n = z; y < n; y++, n--)
+	n = n - 1;
+
+	for (y = 0; y < n; y++, n--)
 	{
-		int z = a[y];
+		int x = a[y];
 
 		a[y] = a[n];
-		a[n] = z;
+		a[n] = x;
 	}
 }
