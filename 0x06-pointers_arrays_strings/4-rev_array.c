@@ -3,7 +3,7 @@
 /**
  * _strlen - string length
  * description: string length
- * @s: variable
+ * @a: variable
  * Return: count
  */
 
