@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -14,7 +15,7 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i]; i++)
 	{
-		if (s[i] == c)
+		if (*(s + 1) == c)
 			return (s + 1);
 	}
 			return (NULL);
