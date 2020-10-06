@@ -15,7 +15,7 @@ for (m = 0; m <= 9; m++)
 for (t = 0; t <= 0; t++)
 {
 r = t * m;
-if (0 != (r / 10))
+if (r > 9)
 {
 _putchar ((r / 10) + '0');
 _putchar ((r % 10) + '0');
@@ -24,20 +24,14 @@ else
 {
 _putchar (r + '0');
 }
-if (t != 9)
-{
-if (((t + 1) * m) >= 10)
+if (t < 9)
 {
 _putchar (',');
 _putchar (' ');
-}
-else
-{
-_putchar (',');
-_putchar (' ');
+if (r * (t + 1) <= 9)
 _putchar (' ');
 }
 }
-}
+_putchar ('\n');
 }
 }
