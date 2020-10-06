@@ -1,15 +1,19 @@
 #include "holberton.h"
 
 /**
- * puts2 - prints every other
- * description: reverse the string
- * @str: variable
- * Return: 0
+ * puts2 - prints every other characters of a string
+ * @str: var
+ * Return: void
  */
 
 void puts2(char *str)
 {
-	int x;
+	int i = 0;
 
-	return (0);
+	for (; str[i] != '\0'; i++)
+	{
+		if (i % 2 == 0)
+			_putchar(str[i]);
+	}
+	_putchar('\n');
 }
