@@ -10,8 +10,8 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
