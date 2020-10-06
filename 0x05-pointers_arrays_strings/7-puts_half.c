@@ -1,37 +1,48 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * puts_half - put it down
- * description: lol at the presidential debate
- * @str: stringgg
- * Return: 0
+ * _strlen - counts the number of characters in a string
+ * @s: This is a pointer to a string
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (s[count] != '\0')
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
+ * puts_half - prints half of the string
+ * @str: string of characters
+ * Return: void
  */
 
 void puts_half(char *str)
 {
-	int len = 0, half;
+	int count = _strlen(str);
+	int a;
+	int b;
+	int c;
 
-	while (str[len] != '\0')
+	if (count % 2 == 0)
 	{
-		len++;
-	}
-	if (len % 2 == 0)
-	{
-		while (half <= len)
-		{
-			half = len / 2;
-			_putchar(str[half]);
-			half++;
-		}
+		c = count / 2;
+
+		for (a = c; str[a] != '\0'; a++)
+			_putchar(str[a]);
 	}
 	else
 	{
-		half = (len - 1) / 2;
-		while (half <= len)
-		{
-			_putchar(str[half]);
-			half++;
-		}
+		c = (count - 1) / 2;
+		for (b = c + 1; str[b] != '\0'; b++)
+			_putchar(str[b]);
 	}
 	_putchar('\n');
 }
