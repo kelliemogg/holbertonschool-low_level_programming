@@ -1,15 +1,36 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * rot13 - and away we go
- * description: pointers
- * @rot13: variable
- * Return: pointer to dest
+ * _strlen - counts the number of characters in a string
+ * @s: This is a pointer to a string
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (s[count] != '\0')
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
+ * rot13 - encodes a string to rot13
+ * @*: a string
+ * Return: encoded string
  */
 
 char *rot13(char *)
 {
-	int x;
+	int i;
+	int count = _strlen(src);
 
-	return (0);
+	for (i = 0; i <= count; i++)
+		dest[i] = src[i];
+
+	return (dest);
 }
