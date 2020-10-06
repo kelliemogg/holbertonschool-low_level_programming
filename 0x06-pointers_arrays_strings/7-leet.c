@@ -1,36 +1,23 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * _strlen - counts the number of characters in a string
- * @s: This is a pointer to a string
- * Return: length of string
+ * leet - leetspeak
+ * @str: variable
+ * Return: str
  */
 
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-/**
- * leet - encode characters to 1337
- * @*: a string
- * Return: encoded string
- */
-
-char *leet(char *)
+char *leet(char *str)
 {
 	int i;
-	int count = _strlen(src);
+	int j;
+	char array[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char leet[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (i = 0; i <= count; i++)
-		dest[i] = src[i];
+	for (i = 0; str[i] != '\0'; i++)
 
-	return (dest);
+		for (j = 0; array[j] != '\0'; j++)
+
+			if (str[i] == array[j])
+				str[i] = leet[j];
+	return (str);
 }
