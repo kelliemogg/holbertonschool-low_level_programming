@@ -16,10 +16,12 @@ int _atoi(char *s)
 	int i = 0;
 	int sign = 1;
 
-	for (i = 0; !(s[i] >= '0' && s[i] <= '9') && s[i] I= '\0'; i++);
+	for (i = 0; !(s[i] >= '0' && s[i] <= '9') && s[i] != '\0'; i++)
+
 	stnb = i;
 
-	for (; s[i] >= '0' && s[i] <= '9'; i++);
+	for (; s[i] >= '0' && s[i] <= '9'; i++)
+
 	ednb = i;
 
 	for (i = 0; i < stnb; i++)
