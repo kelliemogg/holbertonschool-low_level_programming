@@ -4,6 +4,7 @@
  * main - main
  * description: print arguments
  * @argv: argv
+ * @argc: argc
  * Return: 0
  */
 
