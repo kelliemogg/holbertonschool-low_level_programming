@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * alloc_grid - allllloc
+ * description: heyo
+ * @width: width
+ * @height: height
+ * return: yes
+ */
+
 int **alloc_grid(int width, int height)
 {
 	int **array;
