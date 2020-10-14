@@ -1,3 +1,7 @@
+#include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 int **alloc_grid(int width, int height)
 {
 	int **array;
@@ -29,5 +33,5 @@ int **alloc_grid(int width, int height)
 			array[i][j] = 0;
 		}
 	}
-	return(array);
+	return (array);
 }
