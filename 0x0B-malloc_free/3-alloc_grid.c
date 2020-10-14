@@ -7,7 +7,7 @@
  * description: heyo
  * @width: width
  * @height: height
- * return: yes
+ * Return: array
  */
 
 int **alloc_grid(int width, int height)
