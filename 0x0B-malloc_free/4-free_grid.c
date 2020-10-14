@@ -6,7 +6,6 @@
  * description: up the grid
  * @grid: the grid
  * @height: how tall
- * @x: int
  * return: 0
  */
 
