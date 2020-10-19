@@ -4,8 +4,6 @@
 /**
  * main - main
  * description: printing a program
- * argc: argc
- * argv: argv
  * Return: 0
  */
 
