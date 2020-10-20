@@ -10,7 +10,10 @@
 
 void free_dog(dog_t *d)
 {
-	(void)d;
-
-	return;
+	if (d)
+	{
+	free(name);
+	free(owner);
+	free(my_dog);
+	}
 }
