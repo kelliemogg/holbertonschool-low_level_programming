@@ -8,10 +8,17 @@
  * Return: 0
  */
 
-main number_of_bytes(int)
+int main(int argc, char **argv)
 {
-	int x = 0;
-
-	printf("0x%x\n", x);
-	printf("Error\n");
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	if (atoi(argv[1]) < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	return (0);
 }
