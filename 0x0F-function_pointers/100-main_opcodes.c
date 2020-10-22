@@ -1,10 +1,14 @@
 #include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 /**
- * number_of_bytes - numb of bytes
+ * main - main
  * description: adv
+ * @argc: argc
+ * @argv: argv
  * Return: 0
  */
 
