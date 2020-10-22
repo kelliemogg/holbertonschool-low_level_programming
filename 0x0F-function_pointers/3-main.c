@@ -11,7 +11,6 @@
 int main(int argc, char **argv)
 {
 	int a, b;
-	/* char *ptr; */
 	int (*doug)(int, int);
 
 	if (argc != 4)
@@ -27,7 +26,6 @@ int main(int argc, char **argv)
 	}
 	b = atoi(argv[3]);
 	a = atoi(argv[1]);
-	/* ptr = *(argv[2]); */
 	if ((*argv[2] == '/' || *argv[2] == '%') && argv[3] == 0)
 	{
 		printf("Error\n");
