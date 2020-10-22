@@ -29,13 +29,11 @@ int main(int argc, char **argv)
 	}
 	b = atoi(argv[3]);
 	a = atoi(argv[1]);
-	if ((*argv[2] == '/' || *argv[2] == '%') && argv[3] == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	doug = get_op_func(argv[2]);
-
 	printf("%d\n", doug(a, b));
 	return (0);
 }
