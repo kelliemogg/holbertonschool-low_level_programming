@@ -1,0 +1,10 @@
+#ifndef _VARIADIC_FUNCTIONS_H_
+#define _VARIADIC_FUNCTIONS_H_
+
+#include <stdio.h>
+#include <stddef.h>
+
+int _putchar(char c);
+
+
+#endif /* _VARIADIC_FUNCTIONS_H_ */
