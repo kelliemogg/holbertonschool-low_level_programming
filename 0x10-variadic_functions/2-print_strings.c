@@ -26,6 +26,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else if (separator && index == (n - 1))
 			printf("%s", va_arg(more_list, char *));
 
+		else if (!separator)
+			printf("%s", va_arg(more_list, char *));
+
 		else
 			printf("(nil)");
 	}
