@@ -15,22 +15,25 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int index;
 	va_list more_list;
+	char *arg;
 
 	va_start(more_list, n);
 
 	for (index = 0; index < n; index++)
 	{
-		if (separator && index != (n - 1))
-			printf("%s%s", va_arg(more_list, char *), separator);
+		arg = va_arg(more_list, char *);
+
+		if (!arg)
+			printf("(nil)");
+
+		else if (separator && index != (n - 1))
+			printf("%s%s", arg, separator);
 
 		else if (separator && index == (n - 1))
-			printf("%s", va_arg(more_list, char *));
+			printf("%s", arg);
 
 		else if (!separator)
-			printf("%s", va_arg(more_list, char *));
-
-		else
-			printf("(nil)");
+			printf("%s", arg);
 	}
 	va_end(more_list);
 	printf("\n");
