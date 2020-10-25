@@ -45,5 +45,5 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(pizza_list);
-	return (0);
+	return;
 }
