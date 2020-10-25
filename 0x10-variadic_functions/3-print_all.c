@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 
 	while (format[index] != '\0')
 	{
-		switch(format[index])
+		switch (format[index])
 		{
 		case 'c':
 			printf("%c", va_arg(pizza_list, int));
@@ -45,5 +45,5 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(pizza_list);
-	return;
+	return (0);
 }
