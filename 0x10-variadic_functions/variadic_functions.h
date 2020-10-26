@@ -6,13 +6,14 @@
 
 /**
  * struct linda - struct for lindas
- * @char: character to take in
+ * @x: x
  * @eat: pointer to function
  */
 
 typedef struct linda
 {
-	char x; void (*eat)();
+	char x;
+	void (*eat)();
 } linda;
 
 int _putchar(char c);
