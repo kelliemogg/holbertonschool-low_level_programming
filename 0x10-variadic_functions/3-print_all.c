@@ -5,6 +5,7 @@
 
 /**
  * char_func - char
+ * @pizza_list: pl
  * Return: void
  */
 
@@ -14,6 +15,7 @@ void char_func(va_list pizza_list)
 }
 /**
  * float_func - float
+ * @pizza_list: pl
  * Return: void
  */
 
@@ -23,6 +25,7 @@ void float_func(va_list pizza_list)
 }
 /**
  * int_func - int
+ * @pizza_list: pl
  * Return: void
  */
 
@@ -32,6 +35,7 @@ void int_func(va_list pizza_list)
 }
 /**
  * string_func - string
+ * @pizza_list: pl
  * Return: void
  */
 
