@@ -1,21 +1,8 @@
-#include <unistd.h>
-ssize_t write(int fd, const void *buf, size_t count)
-
-	global _start
-
-	section .text
-
-_start:
-	  mov rax, 1        	; write(
-	  mov rdi, 1        	;   STDOUT_FILENO,
-	  mov rsi, msg      	;   "Hello, world!\n",
-	  mov rdx, msglen   	;   sizeof("Hello, world!\n")
-	  syscall           	; );
-
-	  mov rax, 60       	; exit(
-	  mov rdi, 0        	;   EXIT_SUCCESS
-	  syscall           	; );
-
-	section .rodata
-msg:	 db "Hello, world!", 10
-msglen:	 equ $ - msg
+   .global main             /* Make main a global function */
+main:	                       /* Start function main */
+	   mov $msg, %rdi           /* RDI gets pointer to message */
+	   call puts                /* puts(msg) */
+	   mov $0, %rax             /* RAX gets zero */
+	   ret                      /* return(0) */
+msg:	                        /* Declare a label for the string */
+	   .asciz "Hello World"     /* Define the string */
