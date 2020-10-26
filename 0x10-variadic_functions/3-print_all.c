@@ -8,7 +8,6 @@
  * @pizza_list: pl
  * Return: void
  */
-
 void char_func(va_list pizza_list)
 {
 	printf("%c", va_arg(pizza_list, int));
@@ -18,7 +17,6 @@ void char_func(va_list pizza_list)
  * @pizza_list: pl
  * Return: void
  */
-
 void float_func(va_list pizza_list)
 {
 	printf("%f", va_arg(pizza_list, double));
@@ -28,7 +26,6 @@ void float_func(va_list pizza_list)
  * @pizza_list: pl
  * Return: void
  */
-
 void int_func(va_list pizza_list)
 {
 	printf("%i", va_arg(pizza_list, int));
@@ -38,17 +35,13 @@ void int_func(va_list pizza_list)
  * @pizza_list: pl
  * Return: void
  */
-
 void string_func(va_list pizza_list)
 {
 	char *string;
-
 	string = va_arg(pizza_list, char *);
 
 	if (!string)
-	{
 		string = "(nil)";
-	}
 	printf("%s", string);
 }
 /**
@@ -70,10 +63,9 @@ void print_all(const char * const format, ...)
 		{'s', string_func},
 		{'\0', NULL}
 	};
-
 	va_start(pizza_list, format);
 
-	while (format[outer] != '\0'  && format != NULL)
+	while (format != NULL format[outer] != '\0')
 	{
 		inner = 0;
 		while (inner < 4)
