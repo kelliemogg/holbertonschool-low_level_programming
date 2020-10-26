@@ -38,6 +38,7 @@ void int_func(va_list pizza_list)
 void string_func(va_list pizza_list)
 {
 	char *string;
+
 	string = va_arg(pizza_list, char *);
 
 	if (!string)
