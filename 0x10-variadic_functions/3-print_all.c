@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 	};
 	va_start(pizza_list, format);
 
-	while (format != NULL format[outer] != '\0')
+	while (format[outer] != '\0' && format != NULL)
 	{
 		inner = 0;
 		while (inner < 4)
