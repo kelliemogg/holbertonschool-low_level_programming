@@ -4,6 +4,17 @@
 #include <stdio.h>
 #include <stddef.h>
 
+/**
+ * struct linda - struct for lindas
+ * @char: character to take in
+ * @eat: pointer to function
+ */
+
+typedef struct linda
+{
+	char x; void (*eat)();
+} linda;
+
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
