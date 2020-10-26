@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 	};
 	va_start(pizza_list, format);
 
-	while (format[outer] && format)
+	while (format && format[outer])
 	{
 		while (inner < 4)
 		{
