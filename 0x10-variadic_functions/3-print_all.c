@@ -67,7 +67,6 @@ void print_all(const char * const format, ...)
 
 	while (format[outer] && format)
 	{
-		inner = 0;
 		while (inner < 4)
 		{
 			if (j[inner].x == format[outer])
@@ -78,6 +77,7 @@ void print_all(const char * const format, ...)
 			}
 			inner++;
 		}
+		inner = 0;
 		outer++;
 	}
 	printf("\n");
