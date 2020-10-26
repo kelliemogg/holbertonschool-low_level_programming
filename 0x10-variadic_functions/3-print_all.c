@@ -4,6 +4,50 @@
 #include <stdio.h>
 
 /**
+ * char_func - char
+ * Return: void
+ */
+
+void char_func(va_list pizza_list)
+{
+	printf("%c", va_arg(pizza_list, int));
+}
+/**
+ * float_func - float
+ * Return: void
+ */
+
+void float_func(va_list pizza_list)
+{
+	printf("%f", va_arg(pizza_list, double));
+}
+/**
+ * int_func - int
+ * Return: void
+ */
+
+void int_func(va_list pizza_list)
+{
+	printf("%i", va_arg(pizza_list, int));
+}
+/**
+ * string_func - string
+ * Return: void
+ */
+
+void string_func(va_list pizza_list)
+{
+	char *string;
+
+	string = va_arg(pizza_list, char *);
+
+	if (!string)
+	{
+		string = "(nil)";
+	}
+	printf("%s", string);
+}
+/**
  * print_all - print all
  * description: print
  * @format: format
@@ -12,38 +56,34 @@
 
 void print_all(const char * const format, ...)
 {
+	int inner = 0, outer = 0;
 	va_list pizza_list;
-	int index = 0;
-	char *string = 0;
+	char *comma = "";
+	linda j[] = {
+		{'c', char_func},
+		{'f', float_func},
+		{'i', int_func},
+		{'s', string_func},
+		{'\0', NULL}
+	};
 
 	va_start(pizza_list, format);
 
-	while (format[index] != '\0')
+	while (format[outer] != '\0'  && format != NULL)
 	{
-		switch (format[index])
+		inner = 0;
+		while (inner < 4)
 		{
-		case 'c':
-			printf("%c", va_arg(pizza_list, int));
-			break;
-		case 'i':
-			printf("%i", va_arg(pizza_list, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(pizza_list, double));
-			break;
-		case 's':
-			printf("%s", va_arg(pizza_list, char *));
-			if (string == NULL)
-				printf("(nil)");
-			break;
-		default:
-			break;
+			if (j[inner].x == format[outer])
+			{
+				printf("%s", comma);
+				j[inner].eat(pizza_list);
+				comma = ", ";
+			}
+			inner++;
 		}
-		if (format[index + 1] != '\0')
-			printf(", ");
-		index++;
+		outer++;
 	}
 	printf("\n");
 	va_end(pizza_list);
-	return;
 }
