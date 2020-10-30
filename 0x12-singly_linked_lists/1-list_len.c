@@ -23,5 +23,5 @@ size_t list_len(const list_t *h)
 			printf("[0] (nil)\n");
 		x++;
 	}
-	return(x);
+	return (x);
 }
