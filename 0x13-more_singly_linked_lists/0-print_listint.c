@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * listint - list_t
+ * print_listint - list_t
  * description: list elements
  * @h: points to list
  * Return: num of elements
@@ -15,12 +15,9 @@ size_t print_listint(const listint_t *h)
 
 	while (h)
 	{
-		if (h->str != NULL)
-		{
-			h = h->next;
-		}
-		else if (h->str == NULL)
-			printf("[0] (nil)\n");
+		if (h->n)
+			printf("%d\n", h->n);
+		h = h->next;
 		count++;
 	}
 	return (count);
