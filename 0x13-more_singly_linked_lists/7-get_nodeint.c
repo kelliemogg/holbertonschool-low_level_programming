@@ -3,7 +3,8 @@
 /**
  * get_nodeint_at_index - ugh
  * description: list elements
- * @h: points to list
+ * @head: points to list
+ * @index: index
  * Return: num of elements
  */
 
