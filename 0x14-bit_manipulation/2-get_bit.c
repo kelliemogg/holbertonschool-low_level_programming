@@ -7,6 +7,7 @@
  * description: returns the value
  * @n: n
  * @index: index
+ * Return: y
  */
 
 int get_bit(unsigned long int n, unsigned int index)
@@ -16,5 +17,5 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (index > 64)
 		return (-1);
 	y = (n >> index) & 1;
-	return(y);
+	return (y);
 }
