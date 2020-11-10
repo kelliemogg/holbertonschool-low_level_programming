@@ -11,29 +11,26 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	char *ptr;
-	ssize_t fd, count, value;
+	int fp, value, i;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 
-	ptr = malloc(sizeof(char) * text_content);
-	if (ptr == NULL)
-		return (0);
-
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
-
-	count = read(fd, ptr, text_content);
-	if (count == -1)
-		return (0);
-
-	value = write(STDOUT_FILENO, ptr, count);
+	if (text_content != NULL)
+	{
+		for (i = 0; text_content[i] != '\0'; i++)
+			;
+	}
+	if (filename != NULL)
+	{
+		fp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+		if (fp == -1)
+			return (-1);
+	}
+	value = write(fp, text_content, i);
 	if (value == -1)
-		return (0);
+		return (-1);
 
-	free(ptr);
-	close(fd);
-	return (value);
+	close(fp);
+	return (1);
 }
