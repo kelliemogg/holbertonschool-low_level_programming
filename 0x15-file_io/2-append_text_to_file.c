@@ -21,12 +21,10 @@ int append_text_to_file(const char *filename, char *text_content)
 		for (i = 0; text_content[i] != '\0'; i++)
 			;
 	}
-	if (filename != NULL)
-	{
-		fp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-		if (fp == -1)
-			return (-1);
-	}
+	fp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	if (fp == -1)
+		return (-1);
+
 	value = write(fp, text_content, i);
 	if (value == -1)
 		return (-1);
