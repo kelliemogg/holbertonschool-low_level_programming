@@ -11,16 +11,11 @@
  */
 
 int create_file(const char *filename, char *text_content)
+	int create_file(const char *filename, char *text_content)
 {
-	int fp, value, ctr = 0, itr = 0;
+	int fp, value;
 
 	fp = open(filename, O_CREAT | O_TRUNC | O_RDWR, 600);
-
-	for (text_content[itr] = 0; text_content[itr] <= '\0'; text_content[itr]++)
-	{
-		ctr += itr;
-		return (ctr);
-	}
 
 	if (fp == -1)
 		return (-1);
@@ -28,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 	else
 		return (1);
 
-	value = write(STDOUT_FILENO, text_content, ctr);
+	value = write(STDOUT_FILENO, text_content, 1024);
 	if (value == -1)
 		return (-1);
 
