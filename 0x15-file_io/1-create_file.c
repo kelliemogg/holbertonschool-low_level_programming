@@ -12,29 +12,19 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	char *ptr;
-	int fp, value, count;
+	int fp, value;
 
 	if (filename == NULL)
 		return (-1);
 
-	ptr = malloc(sizeof(char) * (*text_content));
-	if (ptr == NULL)
-		return (0);
-
-	fp = open(filename, O_WRONLY);
+	fp = open(filename, O_CREAT | O_TRUNC | O_RDWR, 600);
 	if (fp)
 		return (1);
 
-	count = read(fp, ptr, (*text_content));
-	if (count == -1)
-		return (-1);
-
-	value = write(STDOUT_FILENO, ptr, count);
+	value = write(STDOUT_FILENO, text_content, 1);
 	if (value == -1)
 		return (-1);
 
-	free(ptr);
 	close(fp);
 	return (value);
 }
