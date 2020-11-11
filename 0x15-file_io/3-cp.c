@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 	opnfile = open(argv[1], O_RDWR);
 	if (opnfile == -1)
 		return (error_helper('c', opnfile, argv[1]));
+	return (0);
 }
 
 /**
@@ -43,4 +44,5 @@ int error_helper(char error, int check, char *filename)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", check);
 		return(100);
 	}
+	return (0);
 }
