@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 	}
 	opncpy = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	if (opncpy == -1)
-		return (error_helper('a', opncpy, argv[2]));
+		return (error_helper('b', opncpy, argv[2]));
 
 	opnfile = open(argv[1], O_RDWR);
 	if (opnfile == -1)
-		return (error_helper('b', opnfile, argv[1]));
+		return (error_helper('c', opnfile, argv[1]));
 }
 
 
@@ -31,14 +31,19 @@ int main(int argc, char *argv[])
 
 int error_helper(char error, int check, char *filename)
 {
-	if (error == 'a')
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", check);
-		return (97);
-	}
 	if (error == 'b')
         {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", check);
+                dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
                 return (98);
         }
+	if (error == 'c')
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		return (99);
+	}
+	if (error == 'd')
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", check);
+		return(100);
+	}
 }
