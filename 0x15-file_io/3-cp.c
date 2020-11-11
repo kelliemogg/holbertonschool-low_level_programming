@@ -4,8 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-	char *bfr;
-	int right, reed, opnfile, opncpy;
+	int opnfile, opncpy;
 
 	if (argc != 3)
 	{
@@ -20,8 +19,6 @@ int main(int argc, char *argv[])
 	if (opnfile == -1)
 		return (error_helper('c', opnfile, argv[1]));
 }
-
-
 
 /**
  * error_helper - errors
