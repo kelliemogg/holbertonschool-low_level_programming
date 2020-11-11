@@ -21,6 +21,8 @@ int main(int argc, char *argv[])
 		return (error_helper('c', opnfile, argv[1]));
 
 	bfr = malloc(1024);
+	if (bfr == NULL)
+		return (98);
 	astro = 1024;
 	while (astro == 1024)
 	{
