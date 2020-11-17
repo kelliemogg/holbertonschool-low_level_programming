@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 		if (sec == -1)
 			return (error_helper('b', opnfile, argv[2]));
 	}
+	if (close(opnfile) == -1)
+		return (error_helper('d', opnfile, argv[1]));
 	return (0);
 }
 
