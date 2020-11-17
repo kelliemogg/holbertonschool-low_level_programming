@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-	int opnfile, opncpy, astro;
+	int opnfile, opncpy, astro, sec;
 	char *bfr;
 
 	if (argc != 3)
@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	opnfile = open(argv[1], O_RDWR);
 	if (opnfile == -1)
 		return (error_helper('c', opnfile, argv[1]));
-
 	bfr = malloc(1024);
 	if (bfr == NULL)
 		return (98);
@@ -29,6 +28,9 @@ int main(int argc, char *argv[])
 		astro = read(opncpy, bfr, 1024);
 		if (astro == -1)
 			return (error_helper('b', astro, argv[1]));
+		sec = write(opncpy, bfr, astro);
+		if (sec == -1)
+			return (error_helper('b', opnfile, argv[2]));
 	}
 	return (0);
 }
