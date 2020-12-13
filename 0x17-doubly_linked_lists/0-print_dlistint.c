@@ -3,7 +3,7 @@
 /**
  * print_dlistint - print all the elements
  * description: from a list
- * @h:
+ * @h: data for new node
  * Return: num of nodes
  */
 
