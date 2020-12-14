@@ -9,17 +9,13 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *freedom, *tail;
+	dlistint_t *freedom;
 
-	if (head == NULL)
-		return;
-
-		tail = head;
-	while (tail->next != NULL)
-		tail = tail->next;
-	if (tail == NULL)
-		tail->prev = tail;
-	freedom = tail;
-	free(freedom);
+	while (head != NULL)
+	{
+		freedom->next = freedom;
+		free(freedom);
+		freedom->next = freedom;
 	}
+	free(head);
 }
