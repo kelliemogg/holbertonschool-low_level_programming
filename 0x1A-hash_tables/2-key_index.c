@@ -5,7 +5,7 @@
  * description: write a func giving the indx of a key
  * @key: key
  * @size: size of the array of the hash table
- * Returns: indx where the key exists
+ * Return: indx where the key exists
  */
 
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
