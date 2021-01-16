@@ -12,14 +12,21 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
-	hash_node_t *new;
+	hash_node_t *new, *tmp;
 
 	if (!ht || !key || !value || strcmp(key, "") == 0)
 		return (0);
-	idx = key_index((unsigned char *)(key), ht->size);
-	new = ht->array[idx];
+	new = malloc(sizeof(hash_node_t));
 	if (!new)
 		return (0);
+	idx = key_index((const unsigned char *)(key), ht->size);
+	if (ht->array[idx] == NULL)
+		ht->array[idx] = new;
 	else
-		return (1);
+	{
+		tmp = ht->array[idx];
+		new->next = tmp;
+		new = ht->array[idx];
+	}
+	return (1);
 }
