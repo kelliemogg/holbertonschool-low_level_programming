@@ -17,7 +17,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!ht || !key || !value || strcmp(key, "") == 0)
 		return (0);
 	new = malloc(sizeof(hash_node_t));
+	new->key = (char *)key;
+	new->value = (char *)value;
+	new->next = NULL;
+
 	if (!new)
+		free (new);
 		return (0);
 	idx = key_index((const unsigned char *)(key), ht->size);
 	if (ht->array[idx] == NULL)
