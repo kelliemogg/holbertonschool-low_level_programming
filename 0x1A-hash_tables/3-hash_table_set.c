@@ -31,6 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tmp = ht->array[idx];
 		new->next = tmp;
 		ht->array[idx] = new;
+		free((char *)value);
 		tmp->next = NULL;
 	}
 	return (1);
