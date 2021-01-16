@@ -20,18 +20,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->key = (char *)key;
 	new->value = (char *)value;
 	new->next = NULL;
-	printf("This is key = [%s].\n This is value = [%s]\n", key, value);
 
 	idx = key_index((const unsigned char *)(key), ht->size);
-	printf("This index = [%lu]\n", idx);
+
 	if (ht->array[idx] == NULL)
 		ht->array[idx] = new;
 	else
 	{
 		tmp = ht->array[idx];
 		new->next = tmp;
-		tmp->next = NULL;
 		ht->array[idx] = new;
+		tmp->next = NULL;
 	}
 	return (1);
 }
