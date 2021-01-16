@@ -9,6 +9,12 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
+	char *key = 0;
+	char *value = 0;
+
 	if (ht == NULL)
 		return;
+	printf("{}\n{");
+	printf("%s: %s,", key, value);
+	printf("}");
 }
