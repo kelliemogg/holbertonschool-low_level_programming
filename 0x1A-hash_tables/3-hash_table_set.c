@@ -20,9 +20,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new)
 		return (0);
 
-	value = strdup(value);
-	new->key = (char *)key;
-	new->value = (char *)value;
+	value_copy = strdup(value);
+	key_copy = strdup(key);
+	new->key = (char *)key_copy;
+	new->value = (char *)value_copy;
 	new->next = NULL;
 
 	idx = key_index((const unsigned char *)(key), ht->size);
