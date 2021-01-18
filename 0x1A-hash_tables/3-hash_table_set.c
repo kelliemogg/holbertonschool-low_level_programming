@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
-	hash_node_t *new, *tmp;
+	hash_node_t *new = NULL, *tmp = NULL;
 
 	if (!ht || !key || !value || strcmp(key, "") == 0)
 		return (0);
@@ -34,7 +34,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tmp = ht->array[idx];
 		new->next = tmp;
 		ht->array[idx] = new;
-		tmp->next = NULL;
 	}
 	return (1);
 }
