@@ -8,7 +8,7 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	hash_table_t *h_t = NULL;
+	shash_table_t *h_t = NULL;
 
 	h_t = malloc(sizeof(hash_table_t));
 	if (!h_t)
@@ -31,7 +31,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
-	hash_node_t *new = NULL, *tmp = NULL;
+	shash_node_t *new = NULL, *tmp = NULL;
 
 	if (!ht || !key || !value || strcmp(key, "") == 0)
 		return (0);
@@ -68,7 +68,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int idx = 0;
-	hash_node_t *finder;
+	shash_node_t *finder;
 
 	if (!ht || !key)
 		return (NULL);
@@ -96,7 +96,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	hash_node_t *node = NULL;
+	shash_node_t *node = NULL;
 	unsigned long int i = 0;
 
 	if (ht == NULL)
@@ -124,6 +124,7 @@ void shash_table_print(const shash_table_t *ht)
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
+	(void) *ht;
 	return;
 }
 
@@ -135,7 +136,7 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	hash_node_t *node = NULL, *tmp = NULL;
+	shash_node_t *node = NULL, *tmp = NULL;
 	unsigned long int idx;
 
 	if (ht == NULL)
