@@ -4,13 +4,14 @@
  * insert_dnodeint_at_index - insert node
  * description: insert node
  * @h: head
- * @idk: index
+ * @idx: index
  * @n: data
+ * Return: newnode
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i = 0;
+	unsigned int idx, i = 0;
 	dlistint_t *newnode, *tp, *find;
 
 	if (idx == 0)
@@ -39,12 +40,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	newnode = malloc(sizeof(dlistint_t));
 	if (newnode == NULL)
-	    return (NULL);
+		return (NULL);
 	newnode->n = n;
 	tp = find->prev;
 	newnode->next = find;
 	tp->next = newnode;
 	find->prev = newnode;
 	newnode->prev = tp;
-	return(newnode);
+	return (newnode);
 }
