@@ -16,7 +16,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (*head == NULL || !head)
 		return (-1);
 	find = *head;
-	while (i <= index)
+	while (i < index)
 	{
 		if (i == index && find->prev != NULL)
 		{
