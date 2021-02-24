@@ -1,3 +1,4 @@
+# builds executable, deletes, force compiles
 CC = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:%.c=%.o)
@@ -12,5 +13,5 @@ oclean:
 	$(RM) $(OBJ)
 fclean:
 	$(RM) $(NAME) $(OBJ) *~
-re: $(SRC)
-	$(CC) $(SRC) -o $(NAME)
+re: oclean all
+
