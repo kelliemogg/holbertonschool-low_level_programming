@@ -9,7 +9,7 @@
 * Return: index or -1
 */
 
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	/* mid is the index */
 	int left = 0;
